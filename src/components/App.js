@@ -69,7 +69,7 @@ function reducer(state, action) {
     case "restart":
       return {
         ...initialState,
-        question: state.questions,
+        questions: state.questions,
         status: "ready",
       };
     case "tick":
@@ -142,6 +142,7 @@ export default function App() {
             points={points}
             maxPossiblePoints={maxPossiblePoints}
             highScore={highScore}
+            dispatch={dispatch}
           />
         )}
       </Main>
